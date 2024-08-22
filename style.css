@@ -270,6 +270,10 @@ img{
     img{
         width: 16vh;
     }
+    .container{
+        justify-content: center;
+        gap: 40px;
+    }
 }
 @media(max-width:323px) {
     #rps{

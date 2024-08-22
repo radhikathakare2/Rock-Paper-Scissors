@@ -193,15 +193,15 @@ img{
         height: 11vh;
     }
     #rps{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     #pym{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
     .scoreBox{
         font-size: 1.1rem;
     }
     .score{
-        width: 50vh;
+        width: 45vh;
     }
  }

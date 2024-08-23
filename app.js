@@ -7,7 +7,7 @@ const Cscore = document.querySelector("#computerScore");
 const result = document.querySelector(".msgBox");
 const restartBtn = document.querySelector(".restart");
 const genCompMove = () => {
-    const options = ["rock", "paper", "scissors"];
+    const options = ["Rock", "Paper", "Scissors"];
     const randomChoice = Math.floor(Math.random()*3);
     console.log(options[randomChoice]);
     return options[randomChoice];
@@ -29,16 +29,16 @@ const play = (userChoice) => {
 }
 
 function checkRock(userChoice, compChoice){
-    if(userChoice=="rock" && compChoice=="paper"){
+    if(userChoice=="Rock" && compChoice=="Paper"){
         Cscore.innerHTML=++computerScore;
         Uscore.innerHTML = userScore;
 
         result.style.display = 'flex';
         result.style.alignItems = 'center';
         result.style.justifyContent = 'center';
-        result.innerHTML = `COMPUTER WON! <br> User : ${userChoice} ; Computer = ${compChoice}`;
+        result.innerHTML = `YOU LOST! <br> ${compChoice} beats ${userChoice}`;
         restartBtn.style.display = 'block';
-    }else if(userChoice=="rock" && compChoice=="scissors"){
+    }else if(userChoice=="Rock" && compChoice=="Scissors"){
         Uscore.innerHTML=++userScore;
         Cscore.innerHTML = computerScore;
 
@@ -46,51 +46,51 @@ function checkRock(userChoice, compChoice){
         result.style.alignItems = 'center';
         result.style.justifyContent = 'center';
         
-        result.innerHTML = `YOU WON! <br> User : ${userChoice} ; Computer = ${compChoice}`;
+        result.innerHTML = `YOU WIN! <br> ${userChoice} beats ${compChoice}`;
         restartBtn.style.display = 'block';
     }
 }
 
 function checkPaper(userChoice, compChoice){
-    if(userChoice=="paper" && compChoice=="rock"){
+    if(userChoice=="Paper" && compChoice=="Rock"){
         Uscore.innerHTML=++userScore;
         Cscore.innerHTML = computerScore;
 
         result.style.display = 'flex';
         result.style.alignItems = 'center';
         result.style.justifyContent = 'center';
-        result.innerHTML = `YOU WON! <br> User : ${userChoice} ; Computer = ${compChoice}`;
+        result.innerHTML = `YOU WIN! <br> ${userChoice} beats ${compChoice}`;
         restartBtn.style.display = 'block';
     }
-    else if(userChoice=="paper" && compChoice=="scissors"){
+    else if(userChoice=="Paper" && compChoice=="Scissors"){
         Cscore.innerHTML=++computerScore;
         Uscore.innerHTML = userScore;
 
         result.style.display = 'flex';
         result.style.alignItems = 'center';
         result.style.justifyContent = 'center';
-        result.innerHTML = `COMPUTER WON! <br> User : ${userChoice} ; Computer = ${compChoice}`;
+        result.innerHTML = `YOU LOST! <br>  ${compChoice} beats ${userChoice}`;
         restartBtn.style.display = 'block';
     }
 }
 function checkScissors(userChoice, compChoice){
-    if(userChoice=="scissors" && compChoice=="paper"){
+    if(userChoice=="Scissors" && compChoice=="Paper"){
         Uscore.innerHTML=++userScore;
         Cscore.innerHTML = computerScore;
 
         result.style.display = 'flex';
         result.style.alignItems = 'center';
         result.style.justifyContent = 'center';
-        result.innerHTML = `YOU WON! <br> User : ${userChoice} ; Computer = ${compChoice}`;
+        result.innerHTML = `YOU WIN! <br> ${userChoice} beats ${compChoice}`;
         restartBtn.style.display = 'block';
-    }else if(userChoice=="scissors" && compChoice=="rock"){
+    }else if(userChoice=="Scissors" && compChoice=="Rock"){
         Cscore.innerHTML = ++computerScore;
         Uscore.innerHTML = userScore;
 
         result.style.display = 'flex';
         result.style.alignItems = 'center';
         result.style.justifyContent = 'center';
-        result.innerHTML = `COMPUTER WON! <br> User : ${userChoice} ; Computer = ${compChoice}`;
+        result.innerHTML = `YOU LOST! <br> ${compChoice} beats ${userChoice}`;
         restartBtn.style.display = 'block';
 
     }  
@@ -107,7 +107,7 @@ function draw(userChoice, compChoice){
     result.style.display = 'flex';
     result.style.alignItems = 'center';
     result.style.justifyContent = 'center';
-    result.innerHTML = `Draw! <br> User : ${userChoice} ; Computer = ${compChoice}`;
+    result.innerHTML = `Draw! <br> ${userChoice} beats ${compChoice}`;
     restartBtn.style.display = 'block';
 }
 

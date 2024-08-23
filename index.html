@@ -19,32 +19,31 @@
             <h2 id="pym">Pick Your Move!</h2>
         </div>
         <div class="movesBox">
-            <!-- <button class="moves"> -->
-                <img src="./assets/images/rock.png" alt="rock" class="rock">
-            <!-- </button> -->
-            <!-- <button class="moves"> -->
-                <img src="./assets/images/paper.png" alt="paper" class="paper">
-            <!-- </button> -->
-            <!-- <button class="moves">-->
-                <img src="./assets/images/scissors.png" alt="scissor" class="scissor">
-            <!-- </button>  -->
+            <div class="moves" id="rock">
+                <img src="./assets/images/rock.png" alt="rock">
+            </div>
+            <div class="moves" id="paper">
+                <img src="./assets/images/paper.png" alt="paper">
+            </div>
+            <div class="moves" id="scissors">
+                <img src="./assets/images/scissors.png" alt="scissor">
+            </div> 
           </div>
           <div class="score">
-            <div class="userScore scoreBox">
+            <div class="scoreBox">
                 <div class="user">User</div>
-                <div class="scoreValue"></div>
+                <div id="userScore"></div>
             </div>
-            <div class="computerScore scoreBox">
+            <div class="scoreBox">
                 <div class="computer">Computer</div>
-                <div class="scoreValue"></div>
+                <div id="computerScore"></div>
             </div>
           </div>
           <div class="msgContainer">
-            <div class="msgBox">
-        
-            </div>
+            <div class="msgBox"></div>
+            <div class="restart">Restart</div>
           </div>
     </div>
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
